@@ -15,3 +15,4 @@ RUN apt-get install sudo
 RUn apt-get install libuv1-dev gcc g++ make -y
 RUN ./install-ubuntu.sh
 RUN mkdir build && cd build && cmake .. && make
+
