@@ -32,6 +32,7 @@ socat TCP-LISTEN:6000,reuseaddr,fork UNIX-CLIENT:\"$DISPLAY\"
 
 docker run --rm --name kalman \
     -e DISPLAY=[IP_ADDRESS]:0 \
+    -p 4567:4567 \
     dragon7/carnd-extended-kalman-filter-project
 ```
 
