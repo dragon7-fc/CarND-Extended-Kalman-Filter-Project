@@ -22,6 +22,7 @@ RUN apt-get install -y eclipse-cdt-*
 RUN mkdir build
 RUN mv CMakeLists.txt src
 RUN sed -i 's/src/./g' src/CMakeLists.txt
+COPY src/* src
 WORKDIR /root/workspace/CarND-Extended-Kalman-Filter-Project/build
 RUN cmake -G"Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug ../src/
 RUN make
