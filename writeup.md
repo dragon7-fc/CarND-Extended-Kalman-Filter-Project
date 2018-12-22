@@ -2,18 +2,20 @@
 
 **Extended Kalman Filter Project**
 
-The goals / steps of this project are the following:
-*
-
+We are providing simulated lidar and radar measurements detecting a bicycle that travels around your vehicle. You will use a Kalman filter, lidar measurements and radar measurements to track the bicycle's position and velocity.
 
 [//]: # (Image References)
 
-[image1]: ./images/cnn-architecture-nvidia.png "Model Visualization"
+[image1]: ./images/sensor_fusion_general_flow.png "Sensor Fusion General Flow"
 [image2]: ./images/aug.jpg "Data augmentation"
 [image3]: ./images/pre.jpg "Preprocessing"
 [image4]: ./images/run1.gif "run1 video"
 
 ---
+### Dependencies
+
+* [simulator](https://github.com/udacity/self-driving-car-sim/releases)
+
 ### Environment Setup
 
 1. Open Eclipse IDE
@@ -55,4 +57,41 @@ docker run --rm --name kalman \
     3. Select `/root/workspace/eclipse-cpp-google-style.xml`
     4. Click Ok
 
-### ...
+4. Build
+
+    * Select `Project -> Build All`
+
+    <img src="images/build_all.png" width="500">
+
+5. Run
+
+    * `Right click Project -> Run as -> 1 Local C++ Application`
+
+    <img src="images/run_as.png" width="500">
+
+6. Run simulator
+
+    
+
+### Sensor Funsion General Flow
+
+Belwo is the program flow of this project.
+
+![alt text][image1]
+
+* `src/main.cpp`
+
+communicates with the Term 2 Simulator receiving data measurements, calls a function to run the Kalman filter, calls a function to calculate RMSE
+
+* `src/FusionEKF.cpp`
+
+initializes the filter, calls the predict function, calls the update function
+
+* `src/kalman_filter.cpp`
+
+defines the predict function, the update function for lidar, and the update function for radar
+
+* `src/tools.cpp`
+
+function to calculate RMSE and the Jacobian matrix
+
