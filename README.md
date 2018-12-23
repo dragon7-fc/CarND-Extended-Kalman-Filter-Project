@@ -28,7 +28,7 @@ Lidar measurements are red circles, radar measurements are blue circles with an 
 [image14]: ./images/H.png "H"
 [image15]: ./images/h_radar.png "h"
 [image16]: ./images/jacobian.png "Hj"
-[image17]: ./images/rmse.png "RMSE"
+[image17]: ./images/RMSE.png "RMSE"
 [image18]: ./images/dataset1.png "Dataset 1"
 [image19]: ./images/dataset2.png "Dataset 2"
 
