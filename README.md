@@ -61,13 +61,22 @@ docker run --rm --name kalman \
 2. Import the project into Eclipse
 
     1. Open Eclipse (make sure you have the CDT 4.0 or newer).
+
     2. Import project using Menu `File > Import`
+
     <img src="ide_profiles/Eclipse/images/Capture-EclipseMenuFileImport.jpg" width="500">
+
     3. Select `General > Existing projects into workspace`
+
     <img src="ide_profiles/Eclipse/images/Capture-EclipseProjectsIntoWorkspace.jpg" width="500">
-    4. **Browse** where your build tree is and select the root build tree directory. Keep "Copy projects into workspace" unchecked.
+
+    4. **Browse** `/root/workspace/CarND-Extended-Kalman-Filter-Project/build` and select the root build 
+    tree directory. Keep "Copy projects into workspace" unchecked.
+    
     <img src="ide_profiles/Eclipse/images/Capture-Import-2.png" width="500">
+    
     5. Now you should have a fully functional eclipse project
+    
     <img src="ide_profiles/Eclipse/images/Capture-Final.png" width="800">
 
 3. Code Style
