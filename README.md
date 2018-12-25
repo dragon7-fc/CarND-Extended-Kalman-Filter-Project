@@ -31,6 +31,7 @@ Lidar measurements are red circles, radar measurements are blue circles with an 
 [image17]: ./images/RMSE.png "RMSE"
 [image18]: ./images/dataset1.png "Dataset 1"
 [image19]: ./images/dataset2.png "Dataset 2"
+[image20]: ./images/sensor_comparison.png "Sensor Comparison"
 
 ## Dependencies
 
@@ -129,7 +130,11 @@ defines the predict function, the update function for lidar, and the update func
 
 function to calculate RMSE and the Jacobian matrix
 
-## Sensor Funsion General Flow
+## Sensor Comparison
+
+![alt text][image20]
+
+## Sensor Fusion General Flow
 
 Belwo is the program flow of this project.
 
