@@ -13,26 +13,27 @@ Lidar measurements are red circles, radar measurements are blue circles with an 
 [//]: # (Image References)
 
 [image1]: ./images/sensor_comparison.png "Sensor Comparison"
-[image2]: ./images/sensor_fusion_general_flow.png "Sensor Fusion General Flow"
-[image3]: ./images/two_step_estimation.png "Two-step estimation problem"
-[image4]: ./images/async_predict_update.png "Asynchronize prediction update schema"
-[image5]: ./images/state_vector.png "State Vector"
-[image6]: ./images/state_vector_radar.png "State Vector - Radar"
-[image7]: ./images/state_transition.png "State Transition"
-[image8]: ./images/process_covariance.png "Process Covariance"
-[image9]: ./images/prediction.png "Prediction"
-[image10]: ./images/measurement_vector.png "Measurement Vector"
-[image11]: ./images/measurement_matrix.png "Measurement Matrix"
-[image12]: ./images/update.png "Update"
-[image13]: ./images/update_ekf.png "Update EKF"
-[image14]: ./images/y.png "y"
-[image15]: ./images/y_radar.png "y radar"
-[image16]: ./images/H.png "H"
-[image17]: ./images/h_radar.png "h"
-[image18]: ./images/jacobian.png "Hj"
-[image19]: ./images/RMSE.png "RMSE"
-[image20]: ./images/dataset1.png "Dataset 1"
-[image21]: ./images/dataset2.png "Dataset 2"
+[image2]: ./images/sensor_data_comparisons.png "Sensor Data Comparisons"
+[image3]: ./images/sensor_fusion_general_flow.png "Sensor Fusion General Flow"
+[image4]: ./images/two_step_estimation.png "Two-step estimation problem"
+[image5]: ./images/async_predict_update.png "Asynchronize prediction update schema"
+[image6]: ./images/state_vector.png "State Vector"
+[image7]: ./images/state_vector_radar.png "State Vector - Radar"
+[image8]: ./images/state_transition.png "State Transition"
+[image9]: ./images/process_covariance.png "Process Covariance"
+[image10]: ./images/prediction.png "Prediction"
+[image11]: ./images/measurement_vector.png "Measurement Vector"
+[image12]: ./images/measurement_matrix.png "Measurement Matrix"
+[image13]: ./images/update.png "Update"
+[image14]: ./images/update_ekf.png "Update EKF"
+[image15]: ./images/y.png "y"
+[image16]: ./images/y_radar.png "y radar"
+[image17]: ./images/H.png "H"
+[image18]: ./images/h_radar.png "h"
+[image19]: ./images/jacobian.png "Hj"
+[image20]: ./images/RMSE.png "RMSE"
+[image21]: ./images/dataset1.png "Dataset 1"
+[image22]: ./images/dataset2.png "Dataset 2"
 
 ## Dependencies
 
@@ -135,15 +136,17 @@ function to calculate RMSE and the Jacobian matrix
 
 ![alt text][image1]
 
+![alt text][image2]
+
 ## Sensor Fusion General Flow
 
 Belwo is the program flow of this project.
 
-![alt text][image2]
-
 ![alt text][image3]
 
 ![alt text][image4]
+
+![alt text][image5]
 
 ### initialize EKF matrices
 
@@ -156,7 +159,7 @@ Belwo is the program flow of this project.
 
 | Laser               | Radar               |
 |---------------------|---------------------|
-| ![alt text][image5] | ![alt text][image6] |
+| ![alt text][image6] | ![alt text][image7] |
 
 * Set previous time
 
@@ -168,43 +171,43 @@ Belwo is the program flow of this project.
 
 * F: state transition
 
-![alt text][image7]
+![alt text][image8]
 
 * Q: process covariance
 
-![alt text][image8]
+![alt text][image9]
 
 ### predict x, P
 
-![alt text][image9]
+![alt text][image10]
 
 ### update
 
 * z: measurement vector
 
-![alt text][image10]
+![alt text][image11]
 
 * H: measurement function
 
-![alt text][image11]
+![alt text][image12]
 
 | Laser                | Radar                |
 |----------------------|----------------------|
-| ![alt text][image12] | ![alt text][image13] |
-| ![alt text][image14] | ![alt text][image15] |
-| ![alt text][image16] | ![alt text][image17] |
-|                      | ![alt text][image18] |
+| ![alt text][image13] | ![alt text][image14] |
+| ![alt text][image15] | ![alt text][image16] |
+| ![alt text][image17] | ![alt text][image18] |
+|                      | ![alt text][image19] |
 
 ### Performance Evaluation (Root Mean Square Error)
 
-![alt text][image19]
+![alt text][image20]
 
 ## Result
 
 * Dataset 1
 
-![alt text][image20]
+![alt text][image21]
 
 * Dataset 2
 
-![alt text][image21]
+![alt text][image22]
