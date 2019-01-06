@@ -196,7 +196,8 @@ Belwo is the program flow of this project.
 | ![alt text][image13] | ![alt text][image14] |
 | ![alt text][image15] | ![alt text][image16] |
 | ![alt text][image17] | ![alt text][image18] |
-|                      | ![alt text][image19] |
+
+![alt text][image19]
 
 ### Performance Evaluation (Root Mean Square Error)
 
