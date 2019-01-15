@@ -8,7 +8,7 @@ RUN apt-get install libssl-dev -y
 
 # Install CarND-Extended-Kalman-Filter-Project
 WORKDIR /root/workspace
-RUN git clone https://github.com/udacity/CarND-Extended-Kalman-Filter-Project
+COPY ./ CarND-Extended-Kalman-Filter-Project/
 WORKDIR /root/workspace/CarND-Extended-Kalman-Filter-Project
 RUN chmod a+x install-ubuntu.sh
 RUN apt-get install sudo
@@ -25,12 +25,6 @@ RUN sed -i 's/src/./g' src/CMakeLists.txt
 WORKDIR /root/workspace/CarND-Extended-Kalman-Filter-Project/build
 RUN cmake -G"Eclipse CDT4 - Unix Makefiles" -D CMAKE_BUILD_TYPE=Debug ../src/
 RUN make
-
-# Copy solution code
-WORKDIR /root/workspace/CarND-Extended-Kalman-Filter-Project
-COPY src/FusionEKF.cpp src/
-COPY src/kalman_filter.cpp src/
-COPY src/tools.cpp src/
 
 WORKDIR /root/workspace
 
